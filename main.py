@@ -10,7 +10,6 @@ from common import app, db
 @app.route('/dashboard')
 def dashboard():
 	creds = models.FacebookCredential.query.all()
-	print(creds)
 	return render_template('dashboard.html', credentials=creds)
 
 if __name__ == '__main__':
