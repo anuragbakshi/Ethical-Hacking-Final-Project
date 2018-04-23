@@ -12,7 +12,7 @@ from common import app, db
 
 @app.route('/dashboard')
 def dashboard():
-	creds = models.FacebookCredential.query.all()
+	creds = models.FacebookCredential.query.order_by(models.FacebookCredential.logged_timestamp).all()
 	return render_template('dashboard.html', credentials=creds)
 
 @app.route('/login', methods=['POST'])
