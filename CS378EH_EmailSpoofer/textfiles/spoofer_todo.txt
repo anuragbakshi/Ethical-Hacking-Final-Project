@@ -1,0 +1,2 @@
+set up exim4 on presentation machine's kali
+update java program's variables for the presentation machine
