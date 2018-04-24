@@ -1,0 +1,3 @@
+java --add-modules java.activation -jar spoof0.jar
+/root/Desktop/email_list.txt
+192.168.0.124
