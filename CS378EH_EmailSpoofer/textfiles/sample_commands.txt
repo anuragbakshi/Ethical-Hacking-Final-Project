@@ -1,3 +1,8 @@
+//Exclude --add-modules if lower than Java 9
 java --add-modules java.activation -jar spoof0.jar
+//Directory to email list. Relative works too
 /root/Desktop/email_list.txt
+//IP or domain of site. Don't include protocol
 192.168.0.124
+
+
